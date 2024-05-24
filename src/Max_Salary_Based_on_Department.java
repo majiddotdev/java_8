@@ -13,7 +13,7 @@ public class Max_Salary_Based_on_Department {
 
         Map<String, Optional<Employee>> maxSalaryByDept = employees.stream()
                 .collect(Collectors.groupingBy(
-                        Employee::getName,
+                        Employee::getEmployeeName,
                         Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))
                 ));
 
